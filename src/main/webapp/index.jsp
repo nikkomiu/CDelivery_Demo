@@ -1,38 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Run DB Functions</title>
+</head>
 <body>
-<h2>Dynatrace Continuous Delivery Demo</h2>
-<%@ page import = "cdelivery_demo.*" %>
+	<h2>Dynatrace Continuous Delivery Demo</h2>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-        <FORM NAME="CDdemoform" METHOD="POST">
-            <INPUT TYPE="HIDDEN" NAME="buttonName">
-            <INPUT TYPE="BUTTON" VALUE="Run DB Functions" ONCLICK="button1()">
-            <INPUT TYPE="BUTTON" VALUE="Run Demo Problem1" ONCLICK="button2()">
-			<INPUT TYPE="BUTTON" VALUE="Run Demo Web Services" ONCLICK="button3()">   
-        </FORM>
-
-        <SCRIPT>
-            
-            function button1()
-            {
-            	Excercise myExec;
-            	
-            	myExec.RunDemoDBFunctions();
-                document.form1.buttonName.value = "button 1"
-                form1.submit()
-            }    
-            function button2()
-            {
-            	Excercise myExec;
-            	myExec.RunDemoProblem1();
-                document.form1.buttonName.value = "button 2"
-                form1.submit()
-            }    
-            function button3()
-            {
-            	Excercise myExec;
-            	myExec.RunDemoWebServiceCalls();
-            }
-             
-        </SCRIPT>
-      </body>
+         <script>
+            $(document).ready(function() {                        
+                $('#rundb').click(function(event) {  
+                 $.get('RunDBServlet',function(responseText) {         
+                 });
+                });
+            });
+        </script>          
+	 <form id="form1">
+		<input type="button" id="rundb" value="Run DB Functions"/>
+		<input type="button" id="problem1" value="Run Problem 1"/>
+		<input type="button" id="web services" value="Run Web Services"/>
+</form>
+</body>
 </html>

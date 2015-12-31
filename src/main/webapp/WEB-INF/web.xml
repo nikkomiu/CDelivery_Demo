@@ -4,4 +4,34 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>RunDemoDBServlet</servlet-name>
+  	<display-name>RunDemoDBServlet</display-name>
+  	<description></description>
+  	<servlet-class>cdelivery_demo.RunDemoDBServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RunDBFunctions</servlet-name>
+  	<display-name>RunDBFunctions</display-name>
+  	<description></description>
+  	<servlet-class>cdelivery_demo.RunDBFunctions</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>RunDBServlet</servlet-name>
+  	<display-name>RunDBServlet</display-name>
+  	<description></description>
+  	<servlet-class>cdelivery_demo.RunDBServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RunDemoDBServlet</servlet-name>
+  	<url-pattern>/RunDemoDBServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RunDBFunctions</servlet-name>
+  	<url-pattern>/RunDBFunctions</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RunDBServlet</servlet-name>
+  	<url-pattern>/RunDBServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

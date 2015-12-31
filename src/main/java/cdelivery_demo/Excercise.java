@@ -11,9 +11,10 @@ public class Excercise {
 		Connection conn = null;
 
 		try {
+			DriverManager.registerDriver(new com.mysql.jdbc.Driver ());
 		    conn =
 		       DriverManager.getConnection("jdbc:mysql://localhost:3306/cdelivery_demo_db?" +
-		                                   "user=root&password=!Dynatrace");
+		                                   "user=dynatrace&password=!dynatrace");
 
 		    // Do something with the Connection
 		    Statement stmt = conn.createStatement();

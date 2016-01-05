@@ -24,7 +24,7 @@ public class RunDBServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// Call RunDemoDBFUnctions()
 		Excercise Ex = new Excercise();
 		Ex.RunDemoDBFunctions();
 		response.getWriter().append("Served at: ").append(request.getContextPath());

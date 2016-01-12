@@ -6,6 +6,10 @@
 
 The configuration for the Docker container of the application.
 
+### Docker Repository
+
+The Docker repository is on the Docker Hub **[nikkoamiu/cdelivery_demo](https://hub.docker.com/r/nikkoamiu/cdelivery_demo/)**.
+
 ### Environment Variables
 
 - `DB_HOSTNAME`: The hostname of the MySQL database instance (default: `localhost`)

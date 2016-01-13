@@ -1,5 +1,7 @@
 # Continuous Delivery Demo
 
+[![](https://badge.imagelayers.io/nikkoamiu/cdelivery_demo:latest.svg)](https://imagelayers.io/?images=nikkoamiu/cdelivery_demo:latest 'Get your own badge on imagelayers.io')
+
 **TODO:** Give overview of application
 
 ## Docker Configuration

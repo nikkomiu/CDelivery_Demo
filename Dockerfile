@@ -7,3 +7,5 @@ ENV DB_HOSTNAME localhost
 ENV DB_DATABASE cdelivery_demo_db
 ENV DB_USERNAME dynatrace
 ENV DB_PASSWORD !dynatrace
+
+COPY target/cdelivery_demo.war /usr/local/tomcat/webapps

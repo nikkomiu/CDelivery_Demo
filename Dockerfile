@@ -8,4 +8,6 @@ ENV DB_DATABASE cdelivery_demo_db
 ENV DB_USERNAME dynatrace
 ENV DB_PASSWORD !dynatrace
 
-COPY target/cdelivery_demo.war /usr/local/tomcat/webapps
+RUN rm -rf /usr/local/tomcat/webapps/ROOT/*
+
+COPY target/cdelivery_demo /usr/local/tomcat/webapps/ROOT

@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class Excercise {
 
-	public void RunDemoDBFunctions() 
+	public void RunDemoDBFunctions()
 	{
 		// This code will be for RunDemo
 		Connection conn = null;
@@ -17,27 +17,27 @@ public class Excercise {
 			String dbPass = getEnvOrDefault("DB_PASSWORD", "!dynatrace");
 
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver ());
-		    conn =
-		       DriverManager.getConnection(String.format("jdbc:mysql://%s:3306/%s?" +
-		                            "user=%s&password=%s", dbHost, dbBase, dbUser, dbPass));
+			conn =
+			DriverManager.getConnection(String.format("jdbc:mysql://%s:3306/%s?" +
+				"user=%s&password=%s", dbHost, dbBase, dbUser, dbPass));
 
-		    // Do something with the Connection
-		    Statement stmt = conn.createStatement();
-		    ResultSet rs;
+			// Do something with the Connection
+			Statement stmt = conn.createStatement();
+			ResultSet rs;
 
-		    rs = stmt.executeQuery("SELECT * FROM demo_table");
-		    while( rs.next() )
-		    {
-		    String fullname = rs.getString("Name");
-		  	System.out.println(fullname);
-		    }
-		    conn.close();
+			rs = stmt.executeQuery("SELECT * FROM demo_table");
+			while( rs.next() )
+			{
+				String fullname = rs.getString("Name");
+				System.out.println(fullname);
+			}
+			conn.close();
 
 		} catch (SQLException ex) {
-		    // handle any errors
-		    System.out.println("SQLException: " + ex.getMessage());
-		    System.out.println("SQLState: " + ex.getSQLState());
-		    System.out.println("VendorError: " + ex.getErrorCode());
+			// handle any errors
+			System.out.println("SQLException: " + ex.getMessage());
+			System.out.println("SQLState: " + ex.getSQLState());
+			System.out.println("VendorError: " + ex.getErrorCode());
 		}
 	}
 
@@ -51,8 +51,8 @@ public class Excercise {
 		return "true";
 	}
 
-        private static String getEnvOrDefault(String envParam, String defaultValue)
-        {
-            return System.getenv(envParam) != null ? System.getenv(envParam) : defaultValue;
-        }
+	private static String getEnvOrDefault(String envParam, String defaultValue)
+	{
+		return System.getenv(envParam) != null ? System.getenv(envParam) : defaultValue;
+	}
 }

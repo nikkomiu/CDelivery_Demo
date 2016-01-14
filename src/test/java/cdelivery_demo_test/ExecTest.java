@@ -16,12 +16,12 @@ public class ExecTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-	
+
 	@Test
 	public void testDBFunctions()
 	{
 		Excercise ex = new Excercise();
-		
+
 		try {
 			ex.RunDemoDBFunctions();
 		}
@@ -29,18 +29,20 @@ public class ExecTest {
 			fail("DemoDBFunctions Exception");
 		}
 	}
-	
-	@Test public void testProblem1()
+
+	@Test
+	public void testProblem1()
 	{
 		Excercise ex = new Excercise();
-		
+
 		ex.RunDemoProblem1();
 	}
-	
-	@Test public void testWebServiceCalls()
+
+	@Test
+	public void testWebServiceCalls()
 	{
 		Excercise ex = new Excercise();
-		
+
 		ex.RunDemoWebServiceCalls();
 	}
 

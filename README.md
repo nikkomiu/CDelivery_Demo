@@ -1,6 +1,6 @@
 # Continuous Delivery Demo
 
-[![Build Status](http://va1dynadevsrv02.local:8080/buildStatus/icon?job=CDelivery_Demo)](http://va1dynadevsrv02.local:8080/job/CDelivery_Demo/)
+[![Build Status](http://206.128.135.248:8080/buildStatus/icon?job=CDelivery_Demo)](http://206.128.135.248:8080/job/CDelivery_Demo/)
 [![](https://badge.imagelayers.io/nikkoamiu/cdelivery_demo:latest.svg)](https://imagelayers.io/?images=nikkoamiu/cdelivery_demo:latest 'Get your own badge on imagelayers.io')
 
 **TODO:** Give overview of application

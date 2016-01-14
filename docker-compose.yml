@@ -1,0 +1,17 @@
+app:
+  container_name: cdelivery_demo
+  image: nikkoamiu/cdelivery_demo
+  ports:
+   - "8080"
+  expose:
+   - "8080"
+  environment:
+  - DB_HOSTNAME=localhost
+  - DB_USERNAME=dynatrace
+  - DB_PASSWORD=!dynatrace
+  - DB_DATABASE=cdelivery_demo_db
+
+watcher:
+  image: centurylink/watchtower
+  volumes:
+   - /var/run/docker.sock:/var/run/docker.sock

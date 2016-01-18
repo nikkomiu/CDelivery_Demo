@@ -5,6 +5,7 @@ app:
    - "8080"
   expose:
    - "8080"
+  net: "bridge"
   environment:
   - DB_HOSTNAME=localhost
   - DB_USERNAME=dynatrace

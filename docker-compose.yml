@@ -2,15 +2,24 @@ app:
   container_name: cdelivery_demo
   image: nikkoamiu/cdelivery_demo
   ports:
-   - "8080"
+   - "8888:8080"
   expose:
    - "8080"
-  net: "bridge"
+  links:
+   - db
   environment:
-  - DB_HOSTNAME=localhost
-  - DB_USERNAME=dynatrace
-  - DB_PASSWORD=!dynatrace
-  - DB_DATABASE=cdelivery_demo_db
+   - DB_HOSTNAME=db
+   - DB_USERNAME=dynatrace
+   - DB_PASSWORD=!dynatrace
+   - DB_DATABASE=cdelivery_demo_db
+
+db:
+  image: mariadb
+  environment:
+    - MYSQL_DATABASE=cdelivery_demo_db
+    - MYSQL_USER=dynatrace
+    - MYSQL_PASSWORD=!dynatrace
+    - MYSQL_ROOT_PASSWORD=somerootpassword
 
 watcher:
   image: centurylink/watchtower

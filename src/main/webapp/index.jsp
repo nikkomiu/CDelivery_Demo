@@ -22,6 +22,7 @@ pageEncoding="UTF-8"%>
 		<input type="button" id="rundb" value="Run DB Functions"/>
 		<input type="button" id="problem1" value="Run Problem 1"/>
 		<input type="button" id="web services" value="Run Web Services"/>
+		<input type="button" id="async-worker" value="Run Async Worker"/>
 	</form>
 </body>
 </html>

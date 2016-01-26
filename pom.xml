@@ -133,7 +133,7 @@
 					<forkMode>once</forkMode>
 
 					<!-- load the Java agent in the new JVM and also pass the test run id (dtTestrunID property) to the agent -->
-					<argLine>-agentpath:/opt/dynatrace/agent/lib64/libdtagent.so=name=demo_app,server=${dynaTrace.collector},optionTestRunIdJava=${BUILD_ID}</argLine>
+					<argLine>-agentpath:/opt/dynatrace/agent/lib64/libdtagent.so=name=demo_app,server=${dynaTrace.collector},optionTestRunIdJava=${dtTestrunID}</argLine>
 				</configuration>
 			</plugin>
 
@@ -151,7 +151,7 @@
 							<versionMinor>0</versionMinor>
 							<versionRevision>0</versionRevision>
 							<versionMilestone>1</versionMilestone>
-							<versionBuild>${dynaTrace.versionBuild}</versionBuild>
+							<versionBuild>${BUILD_ID}</versionBuild>
 							<category>unit</category>
 							<profileName>Monitoring</profileName>
 							<username>${dynaTrace.username}</username>

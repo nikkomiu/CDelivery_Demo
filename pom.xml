@@ -14,11 +14,12 @@
 		<!-- Setting default values for Dynatrace Maven goals that operate on a system profile -->
 		<dynaTrace.username>admin</dynaTrace.username>
 		<dynaTrace.password>admin</dynaTrace.password>
-		<dynaTrace.serverUrl>http://localhost:8020</dynaTrace.serverUrl>
+		<dynaTrace.serverUrl>http://VA1DYNADEVSRV02.local:8020</dynaTrace.serverUrl>
 		<dynaTrace.profileName>CDelivery_Demo Dev</dynaTrace.profileName>
 		<dynaTrace.collector>VA1DYNADEVSRV02.local</dynaTrace.collector>
 		<dynaTrace.versionBuild>${BUILD_ID}</dynaTrace.versionBuild>
 		<dynaTrace.systemProfile>CDelivery_Demo Dev</dynaTrace.systemProfile>
+		<dynaTrace.agentGroup>Test</dynaTrace.agentGroup>
 
 		<!-- Establish what category we plan on testing, environmentally aware -->
 		<dynaTrace.testCategory>unit</dynaTrace.testCategory>

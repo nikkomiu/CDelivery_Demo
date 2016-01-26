@@ -151,7 +151,7 @@
 							<versionMinor>0</versionMinor>
 							<versionRevision>0</versionRevision>
 							<versionMilestone>1</versionMilestone>
-							<versionBuild>${BUILD_ID}</versionBuild>
+							<versionBuild>${dynaTrace.versionBuild}</versionBuild>
 							<category>unit</category>
 							<profileName>Monitoring</profileName>
 							<username>${dynaTrace.username}</username>

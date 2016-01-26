@@ -153,7 +153,7 @@
 							<versionMilestone>1</versionMilestone>
 							<versionBuild>${BUILD_ID}</versionBuild>
 							<category>unit</category>
-							<profileName>Monitoring</profileName>
+							<profileName>${dynaTrace.systemProfile}</profileName>
 							<username>${dynaTrace.username}</username>
 							<password>${dynaTrace.password}</password>
 							<serverUrl>${dynaTrace.serverUrl}</serverUrl>
